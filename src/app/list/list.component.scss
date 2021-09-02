@@ -1,5 +1,13 @@
 .card{
-    background:rgb(32, 3, 3);
+    background: #0a0c1a;
     border:none;
-    margin-bottom: 55px;
+    margin-bottom: 55px;    
+}
+
+h2.card-title{
+    font-size: 1.25rem;
+}
+
+div.card p{
+    font-weight: bold;
 }
