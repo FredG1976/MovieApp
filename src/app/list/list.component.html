@@ -1,7 +1,11 @@
 <div class="row py-3">
+   <h1>Les films à l'affiche</h1>
+   <input placeholder="Rechercher..." class="form-control" type="text">   
     <div *ngFor="let movie of movies" class="col-12 col-lg-2">
        <!-- HTML d'1 CARD-->
-       <div routerLink="/detail/{{movie.id}}" class="card">
+       <!-- <pre>{{movie | json}}</pre> -->
+       <!-- <div routerLink="detail/{{movie.id}}" class="card"></div> -->
+       <div (click)="goToDetailPage(movie)" class="card">
           <img [src]="getImageUrl(movie.backdrop_path)" class="card-img-top" alt="...">
           <div class="card-body">
              <h2 class="card-title">{{movie.title}}</h2>

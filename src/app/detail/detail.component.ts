@@ -16,6 +16,7 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     let movieid = parseInt(this.route.snapshot.params.movieid);
     this.movieService.getVideosOfMovie(movieid).subscribe((response)=> console.log(response));
+    this.movieService.movie$.subscribe((movie)=> console.log(movie));
   }
 
 }
